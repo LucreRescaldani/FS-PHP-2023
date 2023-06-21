@@ -50,7 +50,6 @@ function mostar() {
 // Función para validar campos del formulario y mostrar mensajes de error
 function validar() {
     if (!(/^[a-zA-ZÁ-ÿ\s]{3,25}$/.test(nombre.value))) {
-        alert("valida nombre "+nombre.value);
         // Si no se cumple la condicion... 
         document.getElementById("errorNombre").innerHTML = "Debe tener de 3 a 25 caracteres, sin números ni símbolos";
         return false;
@@ -59,7 +58,6 @@ function validar() {
         document.getElementById("errorNombre").innerHTML = "";
         } 
     if (!(/^[a-zA-ZÁ-ÿ\s]{3,25}$/.test(apellido.value))) {
-        alert("valida apellido ");
         // Si no se cumple la condicion...
         document.getElementById("errorApellido").innerHTML = "Debe tener de 3 a 25 caracteres, sin números ni símbolos";
         return false;
@@ -68,7 +66,6 @@ function validar() {
         document.getElementById("errorApellido").innerHTML = "";
         }  
     if ((/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)+$/.test(email.value))) { 
-        alert("valida mail ");
         // Si no se cumple la condicion...    /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/   /^[a-z A-Z 0-9.-_+]+@[a-z A-Z 0-9-]+\.[a-z A-Z 0-9-.]+$/
         document.getElementById("errorEmail").innerHTML = "El email no coincide con el formato prueba@ejemplo.com";
         return false;
